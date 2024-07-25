@@ -1,0 +1,6 @@
+/Users/liambaloh/Github/rnd-documentation-evaluation/documentation-evaluation/bin/Debug/documentation_evaluation.exe
+/Users/liambaloh/Github/rnd-documentation-evaluation/documentation-evaluation/bin/Debug/documentation_evaluation.pdb
+/Users/liambaloh/Github/rnd-documentation-evaluation/documentation-evaluation/obj/Debug/documentation-evaluation.csproj.AssemblyReference.cache
+/Users/liambaloh/Github/rnd-documentation-evaluation/documentation-evaluation/obj/Debug/documentation-evaluation.csproj.CoreCompileInputs.cache
+/Users/liambaloh/Github/rnd-documentation-evaluation/documentation-evaluation/obj/Debug/documentation_evaluation.exe
+/Users/liambaloh/Github/rnd-documentation-evaluation/documentation-evaluation/obj/Debug/documentation_evaluation.pdb
