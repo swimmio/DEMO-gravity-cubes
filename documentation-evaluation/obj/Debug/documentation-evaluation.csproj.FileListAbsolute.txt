@@ -4,3 +4,10 @@
 /Users/liambaloh/Github/rnd-documentation-evaluation/documentation-evaluation/obj/Debug/documentation-evaluation.csproj.CoreCompileInputs.cache
 /Users/liambaloh/Github/rnd-documentation-evaluation/documentation-evaluation/obj/Debug/documentation_evaluation.exe
 /Users/liambaloh/Github/rnd-documentation-evaluation/documentation-evaluation/obj/Debug/documentation_evaluation.pdb
+D:\Github\ProductMadness\rnd-documentation-evaluation\documentation-evaluation\obj\Debug\documentation_evaluation.exe
+D:\Github\ProductMadness\rnd-documentation-evaluation\documentation-evaluation\obj\Debug\documentation_evaluation.pdb
+D:\Github\ProductMadness\rnd-documentation-evaluation\documentation-evaluation\bin\Debug\documentation_evaluation.exe
+D:\Github\ProductMadness\rnd-documentation-evaluation\documentation-evaluation\bin\Debug\documentation_evaluation.pdb
+D:\Github\ProductMadness\rnd-documentation-evaluation\documentation-evaluation\obj\Debug\documentation-evaluation.csproj.AssemblyReference.cache
+D:\Github\ProductMadness\rnd-documentation-evaluation\documentation-evaluation\obj\Debug\documentation-evaluation.csproj.SuggestedBindingRedirects.cache
+D:\Github\ProductMadness\rnd-documentation-evaluation\documentation-evaluation\obj\Debug\documentation-evaluation.csproj.CoreCompileInputs.cache
