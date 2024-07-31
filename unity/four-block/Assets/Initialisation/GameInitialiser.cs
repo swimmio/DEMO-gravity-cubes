@@ -1,6 +1,8 @@
 using game.logic;
+using game.logic.EventQueue;
 using game.logic.playfield;
 using game.logic.tile;
+using game.logic.tilespawner;
 using game.service;
 using gamerunner;
 using UnityEngine;
@@ -14,8 +16,10 @@ public class GameInitialiser : MonoBehaviour
     
     void Start()
     {
+        var serviceLocator = new ServiceLocator();
+        
         var playField = new PlayField();
-        var playFieldVM = new PlayFieldViewModel(playField);
+        var playFieldVM = new PlayFieldViewModel(playField, serviceLocator);
         
         var playFieldView = GameObject.Instantiate(PlayFieldPrefab);
         playFieldView.Link(playFieldVM);
@@ -31,14 +35,19 @@ public class GameInitialiser : MonoBehaviour
                 tileView.Link(new TileViewModel(playFieldVM, x, y));
             }
         }
-
-        var serviceLocator = new ServiceLocator();
         var gravity = new GravityService();
         serviceLocator.RegisterService(gravity);
+
+        var spawner = new TileSpawnerService();
+        serviceLocator.RegisterService(spawner);
+        
+        var eventQueue = new EventQueue();
+        serviceLocator.RegisterService(eventQueue);
         
         var gameRunner = new GameRunner(serviceLocator);
         Dispatcher.addUpdatable(gameRunner);
         Dispatcher.addUpdatable(gravity);
+        Dispatcher.addUpdatable(playFieldVM);
         
         Destroy(this.gameObject);
     }
