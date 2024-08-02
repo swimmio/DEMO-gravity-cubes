@@ -1,3 +1,4 @@
+using System.Net.Http;
 using game.logic;
 using game.logic.EventQueue;
 using game.logic.playfield;
@@ -5,17 +6,25 @@ using game.logic.tile;
 using game.logic.tilespawner;
 using game.service;
 using gamerunner;
+using network;
 using UnityEngine;
 
 public class GameInitialiser : MonoBehaviour
 {
     public PlayFieldView PlayFieldPrefab;
     public TileView TilePrefab;
+    
+    [SerializeField]
+    public LoginButton _loginButton;
 
     public Dispatcher Dispatcher;
     
     void Start()
     {
+        var httpRequestFactory = new HttpRequestFactory();
+        var getRequest = (HttpGetRequest)httpRequestFactory.CreateHttpRequest(HttpMethod.Get);
+        var postRequest = httpRequestFactory.CreateHttpRequest(HttpMethod.Post);
+        
         var serviceLocator = new ServiceLocator();
         
         var playField = new PlayField();
@@ -43,6 +52,8 @@ public class GameInitialiser : MonoBehaviour
         
         var eventQueue = new EventQueue();
         serviceLocator.RegisterService(eventQueue);
+        
+        _loginButton.Link(eventQueue);
         
         var gameRunner = new GameRunner(serviceLocator);
         Dispatcher.addUpdatable(gameRunner);
