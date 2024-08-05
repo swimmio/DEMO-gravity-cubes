@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using game.logic;
 using game.logic.EventQueue;
@@ -44,7 +46,14 @@ public class GameInitialiser : MonoBehaviour
                 tileView.Link(new TileViewModel(playFieldVM, x, y));
             }
         }
-        var gravity = new GravityService();
+
+        var gravityStrategies = new List<IGravityStrategy>()
+        {
+            new LevelBasedGravityStrategy(),
+            new TimeBasedGravityStrategy()
+        };
+        var gravityStrategy = gravityStrategies[Random.Range(0, gravityStrategies.Count-1)];
+        var gravity = new GravityService(gravityStrategy);
         serviceLocator.RegisterService(gravity);
 
         var spawner = new TileSpawnerService();
