@@ -1,8 +1,10 @@
+using System;
 using gamerunner;
 using UnityEngine;
 
 namespace game.logic
 {
+    [Serializable]
     public class LevelBasedGravityStrategy : IGravityStrategy
     {
         private readonly float _gravityBase = 9.8f;
@@ -10,6 +12,7 @@ namespace game.logic
         private const float GravityIncreasePerLevel = 0.75f;
     
         public float CurrentGravity => _gravityBase * _level;
+        public float Gravity => _gravityBase * _level;
 
         /// <summary>
         /// Sets the current level.

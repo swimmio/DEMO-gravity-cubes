@@ -1,8 +1,10 @@
+using System;
 using gamerunner;
 using UnityEngine;
 
 namespace game.logic
 {
+    [Serializable]
     public class TimeBasedGravityStrategy : IUpdatable, IGravityStrategy
     {
         private float _gravityBase = 9.8f;
@@ -10,6 +12,7 @@ namespace game.logic
         private float _gravityIncreasePerSecond = 0.1f;
     
         public float CurrentGravity => _gravityBase * _gravityScale;
+        public float Gravity => _gravityBase * _gravityScale;
         
         /// <summary>
         /// Updates the gravity scale based on the elapsed time.
