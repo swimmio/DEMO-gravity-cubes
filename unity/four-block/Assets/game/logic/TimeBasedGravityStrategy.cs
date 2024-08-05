@@ -10,10 +10,22 @@ namespace game.logic
         private float _gravityIncreasePerSecond = 0.1f;
     
         public float CurrentGravity => _gravityBase * _gravityScale;
-
+        
+        /// <summary>
+        /// Updates the gravity scale based on the elapsed time.
+        /// </summary>
         public void Update()
         {
-            _gravityScale += _gravityIncreasePerSecond * Time.deltaTime;
+            setGravityScale(_gravityScale + _gravityIncreasePerSecond * Time.deltaTime);
+        }
+        
+        /// <summary>
+        /// Sets the current level.
+        /// </summary>
+        /// <param name="level">The level to set.</param>
+        public void setGravityScale(float gravityScale)
+        {
+            _gravityScale = gravityScale;
         }
     }
 }
