@@ -52,6 +52,13 @@ GameRunner is responsible for managing the game's main loop, handling gravity ca
 - <SwmLink doc-title="Overview of Dispatcher in Game Runner">[Overview of Dispatcher in Game Runner](/.swm/overview-of-dispatcher-in-game-runner.erfdj45g.sw.md)</SwmLink>
 - <SwmLink doc-title="The IUpdatable class">[The IUpdatable class](/.swm/the-iupdatable-class.x353y.sw.md)</SwmLink>
 
+### Flows
+
+- <SwmLink doc-title="Winning the Game and Submitting the Score">[Winning the Game and Submitting the Score](/.swm/winning-the-game-and-submitting-the-score.ctirxeyx.sw.md)</SwmLink>
+- <SwmLink doc-title="Handling User Login with OnClick">[Handling User Login with OnClick](/.swm/handling-user-login-with-onclick.311gss39.sw.md)</SwmLink>
+
+### 
+
 &nbsp;
 
 *This is an auto-generated document by Swimm AI 🌊 and has not yet been verified by a human*
