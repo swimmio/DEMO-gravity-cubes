@@ -23,77 +23,17 @@ A <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos
 
 Finally, the <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos="14:4:4" line-data="public class GameInitialiser : MonoBehaviour">`GameInitialiser`</SwmToken> object is destroyed to clean up the initialization process.
 
-<SwmSnippet path="/unity/four-block/Assets/Initialisation/GameInitialiser.cs" line="14">
-
----
-
-## <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos="14:4:4" line-data="public class GameInitialiser : MonoBehaviour">`GameInitialiser`</SwmToken> Class
-
-The <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos="14:4:4" line-data="public class GameInitialiser : MonoBehaviour">`GameInitialiser`</SwmToken> class is responsible for setting up the game environment. It creates HTTP request objects, initializes the playfield, sets up gravity strategies, and registers services.
-
-```c#
-public class GameInitialiser : MonoBehaviour
-{
-    public PlayFieldView PlayFieldPrefab;
-    public TileView TilePrefab;
-    
-    [SerializeField]
-    public LoginButton _loginButton;
-
-    public Dispatcher Dispatcher;
-    
-    void Start()
-    {
-        var httpRequestFactory = new HttpRequestFactory();
-        var getRequest = (HttpGetRequest)httpRequestFactory.CreateHttpRequest(HttpMethod.Get);
-        var postRequest = httpRequestFactory.CreateHttpRequest(HttpMethod.Post);
-        
-        var serviceLocator = new ServiceLocator();
-        
-        var playField = new PlayField();
-        var playFieldVM = new PlayFieldViewModel(playField, serviceLocator);
-        
+```mermaid
+graph TD;
+    A[Game Starts] --> B[GameInitialiser Start Method];
+    B --> C[Create HTTP Requests];
+    B --> D[Initialize PlayField];
+    B --> E[Setup Gravity Strategies];
+    B --> F[Register Services];
+    B --> G[Link Login Button];
+    B --> H[Add Updatables to Dispatcher];
+    H --> I[Game Loop Begins];
 ```
-
----
-
-</SwmSnippet>
-
-<SwmSnippet path="/unity/four-block/Assets/Initialisation/GameInitialiser.cs" line="24">
-
----
-
-## Start Method
-
-The <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos="24:3:3" line-data="    void Start()">`Start`</SwmToken> method in the <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos="14:4:4" line-data="public class GameInitialiser : MonoBehaviour">`GameInitialiser`</SwmToken> class performs the initialization tasks. It creates HTTP requests, sets up the playfield and its view model, populates the playfield with tiles, initializes gravity strategies, registers services, links the login button, and adds updatable components to the dispatcher.
-
-```c#
-    void Start()
-    {
-        var httpRequestFactory = new HttpRequestFactory();
-        var getRequest = (HttpGetRequest)httpRequestFactory.CreateHttpRequest(HttpMethod.Get);
-        var postRequest = httpRequestFactory.CreateHttpRequest(HttpMethod.Post);
-        
-        var serviceLocator = new ServiceLocator();
-        
-        var playField = new PlayField();
-        var playFieldVM = new PlayFieldViewModel(playField, serviceLocator);
-        
-        var playFieldView = GameObject.Instantiate(PlayFieldPrefab);
-        playFieldView.Link(playFieldVM);
-        
-        for (int x = 0; x < playFieldVM.Width; x++)
-        {
-            for (int y = 0; y < playFieldVM.Height; y++)
-            {
-                var tile = new Tile(Color.black);
-                playFieldVM.PlaceTile(tile, x, y);
-                
-```
-
----
-
-</SwmSnippet>
 
 <SwmSnippet path="/unity/four-block/Assets/network/HttpRequestFactory.cs" line="8">
 
@@ -163,60 +103,10 @@ The <SwmToken path="unity/four-block/Assets/game/service/ServiceLocator.cs" pos=
 
 </SwmSnippet>
 
-```mermaid
-graph TD;
-    A[Game Starts] --> B[GameInitialiser Start Method];
-    B --> C[Create HTTP Requests];
-    B --> D[Initialize PlayField];
-    B --> E[Setup Gravity Strategies];
-    B --> F[Register Services];
-    B --> G[Link Login Button];
-    B --> H[Add Updatables to Dispatcher];
-    H --> I[Game Loop Begins];
-```
-
-# Main functions
-
-There are several main functions in this folder. Some of them are Start, <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos="27:12:12" line-data="        var getRequest = (HttpGetRequest)httpRequestFactory.CreateHttpRequest(HttpMethod.Get);">`CreateHttpRequest`</SwmToken>, <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos="43:3:3" line-data="                playFieldVM.PlaceTile(tile, x, y);">`PlaceTile`</SwmToken>, and <SwmToken path="unity/four-block/Assets/game/service/ServiceLocator.cs" pos="27:5:5" line-data="        public void RegisterService&lt;T&gt;(T service) where T: IService">`RegisterService`</SwmToken>. We will dive a little into Start.
-
-<SwmSnippet path="/unity/four-block/Assets/Initialisation/GameInitialiser.cs" line="24">
-
----
-
-## Start
-
-The <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos="24:3:3" line-data="    void Start()">`Start`</SwmToken> function is the main entry point for game initialization. It sets up HTTP requests, service locators, playfield, gravity strategies, tile spawner, event queue, and game runner. It also links the login button to the event queue and adds updatable components to the dispatcher.
-
-```c#
-    void Start()
-    {
-        var httpRequestFactory = new HttpRequestFactory();
-        var getRequest = (HttpGetRequest)httpRequestFactory.CreateHttpRequest(HttpMethod.Get);
-        var postRequest = httpRequestFactory.CreateHttpRequest(HttpMethod.Post);
-        
-        var serviceLocator = new ServiceLocator();
-        
-        var playField = new PlayField();
-        var playFieldVM = new PlayFieldViewModel(playField, serviceLocator);
-        
-        var playFieldView = GameObject.Instantiate(PlayFieldPrefab);
-        playFieldView.Link(playFieldVM);
-        
-        for (int x = 0; x < playFieldVM.Width; x++)
-        {
-            for (int y = 0; y < playFieldVM.Height; y++)
-            {
-                var tile = new Tile(Color.black);
-                playFieldVM.PlaceTile(tile, x, y);
-                
-```
-
----
-
-</SwmSnippet>
+# 
 
 &nbsp;
 
 *This is an auto-generated document by Swimm AI 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes" doc-type="overview"><sup>Powered by [Swimm](/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>

@@ -25,24 +25,6 @@ namespace game.logic.tilespawner
 
 </SwmSnippet>
 
-<SwmSnippet path="/unity/four-block/Assets/game/logic/tilespawner/TileSpawnerService.cs" line="14">
-
----
-
-## Piece Delegates
-
-The <SwmToken path="unity/four-block/Assets/game/logic/tilespawner/TileSpawnerService.cs" pos="14:6:6" line-data="        List&lt;CreateTileShapeDelegate&gt; _pieces = new List&lt;CreateTileShapeDelegate&gt;{">`_pieces`</SwmToken> list contains delegates for creating each type of piece, such as <SwmToken path="unity/four-block/Assets/game/logic/tilespawner/TileSpawnerService.cs" pos="15:1:1" line-data="            SpawnIPiece, SpawnJPiece, SpawnLPiece, SpawnOPiece, SpawnSPiece, SpawnTPiece, SpawnZPiece">`SpawnIPiece`</SwmToken>, <SwmToken path="unity/four-block/Assets/game/logic/tilespawner/TileSpawnerService.cs" pos="15:4:4" line-data="            SpawnIPiece, SpawnJPiece, SpawnLPiece, SpawnOPiece, SpawnSPiece, SpawnTPiece, SpawnZPiece">`SpawnJPiece`</SwmToken>, etc.
-
-```c#
-        List<CreateTileShapeDelegate> _pieces = new List<CreateTileShapeDelegate>{
-            SpawnIPiece, SpawnJPiece, SpawnLPiece, SpawnOPiece, SpawnSPiece, SpawnTPiece, SpawnZPiece
-        };
-```
-
----
-
-</SwmSnippet>
-
 <SwmSnippet path="/unity/four-block/Assets/game/logic/tilespawner/TileSpawnerService.cs" line="18">
 
 ---
@@ -62,26 +44,8 @@ The constructor of <SwmToken path="unity/four-block/Assets/game/logic/tilespawne
 
 </SwmSnippet>
 
-<SwmSnippet path="/unity/four-block/Assets/game/logic/tilespawner/IPiece.cs" line="5">
-
----
-
-## Piece Classes
-
-Classes like <SwmToken path="unity/four-block/Assets/game/logic/tilespawner/IPiece.cs" pos="7:5:5" line-data="    public class IPiece: ISpawnable">`IPiece`</SwmToken> implement the <SwmToken path="unity/four-block/Assets/game/logic/tilespawner/IPiece.cs" pos="7:8:8" line-data="    public class IPiece: ISpawnable">`ISpawnable`</SwmToken> interface, defining the behavior of each piece.
-
-```c#
-namespace game.logic.tilespawner
-{
-    public class IPiece: ISpawnable
-```
-
----
-
-</SwmSnippet>
-
 &nbsp;
 
 *This is an auto-generated document by Swimm AI 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes" doc-type="overview"><sup>Powered by [Swimm](/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>

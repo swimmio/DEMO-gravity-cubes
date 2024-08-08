@@ -87,41 +87,8 @@ The Update method accumulates gravity values, increments a frame counter, and sp
 
 </SwmSnippet>
 
-<SwmSnippet path="/unity/four-block/Assets/game/logic/EventQueue/EventQueue.cs" line="15">
-
----
-
-# Enqueuing Events
-
-The new tile shape is enqueued into the <SwmToken path="unity/four-block/Assets/gamerunner/GameRunner.cs" pos="39:3:3" line-data="            var eventQueue = _serviceLocator.GetService&lt;EventQueue&gt;();">`eventQueue`</SwmToken> as a <SwmToken path="unity/four-block/Assets/gamerunner/GameRunner.cs" pos="40:7:7" line-data="            eventQueue.Enqueue(new SpawnTileEvent(this, CreateTileShape));">`SpawnTileEvent`</SwmToken>.
-
-```c#
-        public void Enqueue(IEvent e)
-        {
-            if(!_queues.ContainsKey(e.Id))
-            {
-                _queues[e.Id] = new Queue<IEvent>();
-            }
-            _queues[e.Id].Enqueue(e);
-        }
-```
-
----
-
-</SwmSnippet>
-
-```mermaid
-graph TD;
-    A[ServiceLocator] --> B[GameRunner Initialization];
-    B --> C[Dispatcher.addUpdatable];
-    C --> D[GameRunner Update Method];
-    D --> E[Gravity Accumulation];
-    E --> F[Tile Spawning];
-    F --> G[EventQueue Enqueue];
-```
-
 &nbsp;
 
 *This is an auto-generated document by Swimm AI 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes" doc-type="overview"><sup>Powered by [Swimm](/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>

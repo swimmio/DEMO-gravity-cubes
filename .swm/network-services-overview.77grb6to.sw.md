@@ -9,31 +9,9 @@ The <SwmToken path="unity/four-block/Assets/network/user/UserService.cs" pos="11
 
 The <SwmToken path="unity/four-block/Assets/network/score/ScoreService.cs" pos="11:8:8" line-data="            var postRequest = (HttpPostRequest)httpRequestFactory.CreateHttpRequest(HttpMethod.Post);">`HttpPostRequest`</SwmToken> class handles HTTP POST requests, allowing data to be sent to the server and returning the response.
 
-The <SwmToken path="unity/four-block/Assets/network/user/UserService.cs" pos="6:5:5" line-data="    public class UserService">`UserService`</SwmToken> class within the <SwmToken path="unity/four-block/Assets/network/user/UserService.cs" pos="4:2:4" line-data="namespace network.user">`network.user`</SwmToken> namespace likely manages user-related network operations.
-
 The `IHttpRequest` interface defines a contract for executing HTTP requests, ensuring consistency across different request types.
 
-<SwmSnippet path="/unity/four-block/Assets/network/user/UserService.cs" line="4">
-
----
-
-## <SwmToken path="unity/four-block/Assets/network/user/UserService.cs" pos="6:5:5" line-data="    public class UserService">`UserService`</SwmToken> Class
-
-The <SwmToken path="unity/four-block/Assets/network/user/UserService.cs" pos="6:5:5" line-data="    public class UserService">`UserService`</SwmToken> class within the <SwmToken path="unity/four-block/Assets/network/user/UserService.cs" pos="4:2:4" line-data="namespace network.user">`network.user`</SwmToken> namespace likely manages user-related network operations.
-
-```c#
-namespace network.user
-{
-    public class UserService
-```
-
----
-
-</SwmSnippet>
-
 # Network Services Endpoints
-
-Network Services Endpoints
 
 <SwmSnippet path="/unity/four-block/Assets/network/score/ScoreService.cs" line="8">
 
@@ -93,4 +71,4 @@ The <SwmToken path="unity/four-block/Assets/network/user/UserService.cs" pos="8:
 
 *This is an auto-generated document by Swimm AI 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes" doc-type="overview"><sup>Powered by [Swimm](/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>

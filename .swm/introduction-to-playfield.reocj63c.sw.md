@@ -15,7 +15,9 @@ The Playfield is initialized with a grid of tiles, each represented by an <SwmTo
 
 ---
 
-Playfield Class The Playfield class defines the grid's width and height and initializes the grid with tiles.
+# Playfield Class
+
+The Playfield class defines the grid's width and height and initializes the grid with tiles.
 
 ```c#
     public class PlayField
@@ -39,7 +41,9 @@ Playfield Class The Playfield class defines the grid's width and height and init
 
 ---
 
-Playfield Initialization The Playfield is instantiated in the <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos="14:4:4" line-data="public class GameInitialiser : MonoBehaviour">`GameInitialiser`</SwmToken>.
+# Playfield Initialization
+
+The Playfield is instantiated in the <SwmToken path="unity/four-block/Assets/Initialisation/GameInitialiser.cs" pos="14:4:4" line-data="public class GameInitialiser : MonoBehaviour">`GameInitialiser`</SwmToken>.
 
 ```c#
         var playField = new PlayField();
@@ -54,7 +58,9 @@ Playfield Initialization The Playfield is instantiated in the <SwmToken path="un
 
 ---
 
-Playfield Management The <SwmToken path="unity/four-block/Assets/game/logic/playfield/PlayFieldViewModel.cs" pos="14:3:3" line-data="        public PlayFieldViewModel(PlayField playField, ServiceLocator serviceLocator)">`PlayFieldViewModel`</SwmToken> manages the Playfield and updates the game state.
+# Playfield Management
+
+The <SwmToken path="unity/four-block/Assets/game/logic/playfield/PlayFieldViewModel.cs" pos="14:3:3" line-data="        public PlayFieldViewModel(PlayField playField, ServiceLocator serviceLocator)">`PlayFieldViewModel`</SwmToken> manages the Playfield and updates the game state.
 
 ```c#
     {
@@ -82,4 +88,4 @@ Playfield Management The <SwmToken path="unity/four-block/Assets/game/logic/play
 
 *This is an auto-generated document by Swimm AI 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes" doc-type="overview"><sup>Powered by [Swimm](/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>
