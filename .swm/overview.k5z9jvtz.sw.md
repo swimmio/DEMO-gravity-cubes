@@ -13,7 +13,7 @@ Game Initialization involves setting up the initial state of the game by creatin
 
 ### Debug Tools
 
-In this project, the debug tools are implemented using classes like DebugInvoker and DebugReceiver, which manage and execute debugging commands such as 'vardump'. These tools streamline the debugging process by providing a structured way to invoke and handle various debugging actions.
+In this project, the debug tools are implemented using classes like DebugInvoker and <SwmToken path="/unity/four-block/Assets/debugtools/DebugReceiver.cs" pos="5:5:5" line-data="    public class DebugReceiver">`DebugReceiver`</SwmToken>, which manage and execute debugging commands such as 'vardump'. These tools streamline the debugging process by providing a structured way to invoke and handle various debugging actions.
 
 - <SwmLink doc-title="Debug Tools Overview">[Debug Tools Overview](/.swm/debug-tools-overview.uxk2ygsv.sw.md)</SwmLink>
 
@@ -46,7 +46,7 @@ Network Services refer to the components responsible for handling communication 
 
 ### Game Runner
 
-GameRunner is responsible for managing the game's main loop, handling gravity calculations, and spawning new tiles. It updates the game's state by incrementing gravity and frame counters, and when certain conditions are met, it triggers the spawning of new tiles and enqueues spawn events.
+<SwmToken path="/unity/four-block/Assets/gamerunner/GameRunner.cs" pos="11:4:4" line-data="public class GameRunner : IUpdatable">`GameRunner`</SwmToken> is responsible for managing the game's main loop, handling gravity calculations, and spawning new tiles. It updates the game's state by incrementing gravity and frame counters, and when certain conditions are met, it triggers the spawning of new tiles and enqueues spawn events.
 
 - <SwmLink doc-title="Game Runner Overview">[Game Runner Overview](/.swm/game-runner-overview.u5dqn3bu.sw.md)</SwmLink>
 - <SwmLink doc-title="Overview of Dispatcher in Game Runner">[Overview of Dispatcher in Game Runner](/.swm/overview-of-dispatcher-in-game-runner.erfdj45g.sw.md)</SwmLink>
@@ -63,4 +63,4 @@ GameRunner is responsible for managing the game's main loop, handling gravity ca
 
 *This is an auto-generated document by Swimm AI 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1ncmF2aXR5LWN1YmVzJTNBJTNBc3dpbW1pbw==" repo-name="DEMO-gravity-cubes"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
